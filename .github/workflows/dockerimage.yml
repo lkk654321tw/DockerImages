@@ -18,11 +18,91 @@ jobs:
       run: docker login -u lkk654321tw -p simon561220
       
     - name: build coredns
-      run: docker build . --file coredns/Dockerfile --tag lkk654321tw/docker-images:coredns-1.6.7
+      run: docker build . --file coredns/Dockerfile --tag lkk654321tw/docker-images:coredns-ver-1.6.7
     - name: push coredns  
-      run: docker push lkk654321tw/docker-images:coredns-1.6.7
+      run: docker push lkk654321tw/docker-images:coredns-ver-1.6.7
       
     - name: build defaultbackend-amd64
-      run: docker build . --file defaultbackend-amd64/Dockerfile --tag lkk654321tw/docker-images:defaultbackend-amd64-1.5
+      run: docker build . --file defaultbackend-amd64/Dockerfile --tag lkk654321tw/docker-images:defaultbackend-amd64-ver-1.5
     - name: push defaultbackend-amd64
-      run: docker push lkk654321tw/docker-images:defaultbackend-amd64-1.5
+      run: docker push lkk654321tw/docker-images:defaultbackend-amd64-ver-1.5
+    
+    - name: build elasticsearch-oss
+      run: docker build . --file elasticsearch-oss/Dockerfile --tag lkk654321tw/docker-images:elasticsearch-oss-ver-7.7.0
+    - name: push elasticsearch-oss
+      run: docker push lkk654321tw/docker-images:elasticsearch-oss-ver-7.7.0
+    
+    - name: build etcd
+      run: docker build . --file etcd/Dockerfile --tag lkk654321tw/docker-images:etcd-ver-3.4.3-0
+    - name: push etcd
+      run: docker push lkk654321tw/docker-images:etcd-ver-3.4.3-0
+      
+    - name: build filebeat
+      run: docker build . --file filebeat/Dockerfile --tag lkk654321tw/docker-images:filebeat-ver-7.7.0
+    - name: push filebeat
+      run: docker push lkk654321tw/docker-images:filebeat-ver-7.7.0
+
+    - name: build gitlab-container-registry
+      run: docker build . --file gitlab-container-registry/Dockerfile --tag lkk654321tw/docker-images:gitlab-container-registry-ver-v2.9.0-gitlab
+    - name: push gitlab-container-registry
+      run: docker push lkk654321tw/docker-images:gitlab-container-registry-ver-v2.9.0-gitlab
+      
+    - name: build gitlab-exporter
+      run: docker build . --file gitlab-exporter/Dockerfile --tag lkk654321tw/docker-images:gitlab-exporter-ver-7.0.1
+    - name: push gitlab-exporter
+      run: docker push lkk654321tw/docker-images:gitlab-exporter-ver-7.0.1
+      
+    - name: build gitlab-shell
+      run: docker build . --file gitlab-shell/Dockerfile --tag lkk654321tw/docker-images:gitlab-shell-ver-v12.2.0
+    - name: push gitlab-shell
+      run: docker push lkk654321tw/docker-images:gitlab-shell-ver-v12.2.0
+ 
+    - name: build gitlab-sidekiq-ee
+      run: docker build . --file gitlab-sidekiq-ee/Dockerfile --tag lkk654321tw/docker-images:gitlab-sidekiq-ee-ver-v12.10.3
+    - name: push gitlab-sidekiq-ee
+      run: docker push lkk654321tw/docker-images:gitlab-sidekiq-ee-ver-v12.10.3
+       
+    - name: build gitlab-webservice-ee
+      run: docker build . --file gitlab-webservice-ee/Dockerfile --tag lkk654321tw/docker-images:gitlab-webservice-ee-ver-v12.10.3
+    - name: push gitlab-webservice-ee  
+      run: docker push lkk654321tw/docker-images:gitlab-webservice-ee-ver-v12.10.3
+          
+    - name: build kibana-oss
+      run: docker build . --file kibana-oss/Dockerfile --tag lkk654321tw/docker-images:kibana-oss-ver-7.7.0
+    - name: push kibana-oss
+      run: docker push lkk654321tw/docker-images:kibana-oss-ver-7.7.0
+        
+    - name: build kube-apiserver
+      run: docker build . --file kube-apiserver/Dockerfile --tag lkk654321tw/docker-images:kube-apiserver-ver-v1.18.2
+    - name: push kube-apiserver
+      run: docker push lkk654321tw/docker-images:kube-apiserver-ver-v1.18.2
+            
+    - name: build kube-controller-manager
+      run: docker build . --file kube-controller-manager/Dockerfile --tag lkk654321tw/docker-images:kube-controller-manager-ver-v1.18.2
+    - name: push kube-controller-manager
+      run: docker push lkk654321tw/docker-images:kube-controller-manager-ver-v1.18.2
+                
+    - name: build kube-proxy
+      run: docker build . --file kube-proxy/Dockerfile --tag lkk654321tw/docker-images:kube-proxy-ver-v1.18.2
+    - name: push kube-proxy
+      run: docker push lkk654321tw/docker-images:kube-proxy-ver-v1.18.2
+                 
+    - name: build kube-scheduler
+      run: docker build . --file kube-scheduler/Dockerfile --tag lkk654321tw/docker-images:kube-scheduler-ver-v1.18.2
+    - name: push kube-scheduler
+      run: docker push lkk654321tw/docker-images:kube-scheduler-ver-v1.18.2
+                    
+    - name: build logstash-oss
+      run: docker build . --file logstash-oss/Dockerfile --tag lkk654321tw/docker-images:logstash-oss-ver-7.7.0
+    - name: push logstash-oss
+      run: docker push lkk654321tw/docker-images:logstash-oss-ver-7.7.0
+                     
+    - name: build metrics-server-amd64
+      run: docker build . --file metrics-server-amd64/Dockerfile --tag lkk654321tw/docker-images:metrics-server-amd64-ver-v0.3.6
+    - name: push metrics-server-amd64
+      run: docker push lkk654321tw/docker-images:metrics-server-amd64-ver-v0.3.6
+                         
+    - name: build pause
+      run: docker build . --file pause/Dockerfile --tag lkk654321tw/docker-images:pause-ver-3.2
+    - name: push pause
+      run: docker push lkk654321tw/docker-images:pause-ver-3.2
