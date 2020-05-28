@@ -106,3 +106,13 @@ jobs:
       run: docker build . --file pause/Dockerfile --tag lkk654321tw/docker-images:pause-ver-3.2
     - name: push pause
       run: docker push lkk654321tw/docker-images:pause-ver-3.2
+                     
+    - name: build motebus
+      run: docker build . --file motebus/Dockerfile --tag lkk654321tw/docker-images:motebus-ver-v2.4.9
+    - name: push pause
+      run: docker push lkk654321tw/docker-images:motebus-ver-v2.4.9
+                        
+    - name: build mk8smpod
+      run: docker build . --file mk8smpod/Dockerfile --tag lkk654321tw/docker-images:mk8smpod-ver-v1.1.6
+    - name: push pause
+      run: docker push lkk654321tw/docker-images:mk8smpod-ver-v1.1.6
