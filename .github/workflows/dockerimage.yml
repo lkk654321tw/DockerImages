@@ -116,3 +116,4 @@ jobs:
       run: docker build . --file mk8smpod/Dockerfile --tag lkk654321tw/docker-images:mk8smpod-ver-v1.1.6
     - name: push pause
       run: docker push lkk654321tw/docker-images:mk8smpod-ver-v1.1.6
+
